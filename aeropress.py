@@ -8,28 +8,28 @@ class aeropress:
     def getFilter(self):
         return self.filter
 
-def press(water, beans, aeropress):
+def press(inWater, inBeans, inAeropress):
     #handle the origin
-    if beans.getOrigin() == 'Kenya':
+    if inBeans.getOrigin() == 'Kenya':
         topNote = 'fruit'
     else:
         topNote = 'chocolate'
 
     #handle the roast
-    if beans.getRoast() == 'light':
+    if inBeans.getRoast() == 'light':
         caffeine = 10
     else:
         caffeine = 6
 
-    if water.getTemp() < 85:
+    if inWater.getTemp() < 85:
         acidity = 'high'
     else:
         acidity = 'low'
 
-    if aeropress.getFilter() == 'paper':
+    if inAeropress.getFilter() == 'paper':
         fines = 'low'
     else:
         fines = 'high'
 
-    coffee = coffee(caffeine, fines, topNote, acidity)
-    return coffee
+    outCoffee = ingredients.coffee(caffeine, fines, topNote, acidity)
+    return outCoffee

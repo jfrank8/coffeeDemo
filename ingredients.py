@@ -1,6 +1,6 @@
 class water:
     def __init__(self, temp):
-        self.tempurature = name
+        self.tempurature = temp
 
     def setTemp(self, temp):
         self.tempurature = temp
@@ -29,13 +29,18 @@ class coffee():
         self.caffeine = caffine
         self.fines = fines
         self.topNote = topNote
-        self.extraction = extraction
+        self.acidity = acidity
+    def coffeePrint(self):
+        print(self.caffeine)
+        print(self.fines)
+        print(self.topNote)
+        print(self.acidity)
 
 
-def grind(beans, grind):
-    groundBeans = beans(beans.getOrigin(), beans.getRoast(), grind)
+def grind(inBeans, grind):
+    groundBeans = beans(inBeans.getOrigin(), inBeans.getRoast(), grind)
     return groundBeans
 
-def heatWater(water,temp):
+def heatWater(inWater,temp):
     heatedWater= water(temp%100)
     return heatedWater
