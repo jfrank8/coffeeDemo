@@ -1,5 +1,5 @@
-import ingredients
-import aeropress
+import coffeeDemo.ingredients
+import coffeeDemo.aeropress
 
 def brew():
     myAeropress = aeropress.aeropress(filter = 'paper')
